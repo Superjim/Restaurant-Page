@@ -1,8 +1,15 @@
+import buildHomePage from "./home";
+
 //header, contains navbar
 function buildHeader() {
   const header = document.createElement("header");
   const name = document.createElement("h1");
-  name.textContent = "Restaurant";
+  const logo = document.createElement("img");
+  name.textContent = "lorem ipsum restaurant";
+  logo.src = "images/logo.svg";
+  logo.alt = "logo";
+
+  header.appendChild(logo);
   header.appendChild(name);
   header.appendChild(buildNavBar());
 
@@ -16,7 +23,7 @@ function buildNavBar() {
   const homeBtn = document.createElement("button");
   homeBtn.textContent = "Home";
   homeBtn.addEventListener("click", (e) => {
-    console.log("home");
+    buildHomePage();
   });
 
   const menuBtn = document.createElement("button");

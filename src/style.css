@@ -1,7 +1,15 @@
 body {
-  background-image: url("src\images\favour-otunji-dD7xFyDzES4-unsplash.jpg");
-  background-color: aliceblue;
-  /* //Photo by <a href="https://unsplash.com/@kodeblacc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Favour Otunji</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
-  background-attachment: fixed;
+  background-image: url("images/restaurant.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+body > * {
+  color: white;
+}
+
+/* Photo by <a href="https://unsplash.com/@kodeblacc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Favour Otunji</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+
+h1 {
+  text-transform: uppercase;
 }

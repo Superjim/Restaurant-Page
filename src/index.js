@@ -1,4 +1,5 @@
 import buildWebsite from "./site";
-import "./style.css"
+import "./style.css";
 
 buildWebsite();
+

@@ -14,12 +14,23 @@ function initHomePage() {
   secondHeading.appendChild(secondHeadingText);
 
   const thirdHeading = document.createElement("h3");
-  const thirdHeadingText = document.createTextNode("Please browse our delicious menu and contact us to book a table.");
+  const thirdHeadingText = document.createTextNode(
+    "Please browse our delicious menu and contact us to book a table."
+  );
   thirdHeading.appendChild(thirdHeadingText);
+
+  const award = document.createElement("div");
+  const awardIcon = document.createElement("i");
+  const awardText = document.createTextNode("3 Goodyear Stars");
+  awardIcon.className = "fa-solid fa-award";
+
+  award.appendChild(awardIcon);
+  award.appendChild(awardText);
 
   home.appendChild(mainHeading);
   home.appendChild(secondHeading);
   home.appendChild(thirdHeading);
+  home.appendChild(award);
 
   return home;
 }

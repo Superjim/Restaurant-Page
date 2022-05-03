@@ -1,16 +1,19 @@
 import buildHomePage from "./home";
+import Logo from "./images/logo.svg";
 
 //header, contains navbar
 function buildHeader() {
+  const headerContainer = document.createElement("headerContainer");
   const header = document.createElement("header");
   const name = document.createElement("h1");
-  const logo = document.createElement("img");
   name.textContent = "lorem ipsum restaurant";
-  logo.src = "images/logo.svg";
-  logo.alt = "logo";
 
-  header.appendChild(logo);
-  header.appendChild(name);
+  const logo = new Image();
+  logo.src = Logo;
+
+  headerContainer.appendChild(logo);
+  headerContainer.appendChild(name);
+  header.appendChild(headerContainer);
   header.appendChild(buildNavBar());
 
   return header;

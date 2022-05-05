@@ -1,12 +1,27 @@
+var mains = [
+  {
+    name: "Aged beef fillet, brocolli, black garlic, Madeira and tarragon jus",
+    price: "36",
+  },
+  {
+    name: "Loin of Scottish venison, plum, parsnip, swede, venison jus",
+    price: "34",
+  },
+  {
+    name: "Packington chicken, roasted shallot, mushroom, sherry",
+    price: "29",
+  },
+];
+
 //create menu item
 function createMenuElement(object) {
   const item = document.createElement("div");
 
-  const foodName = document.createElement("h2");
-  foodName.textContent = name;
+  const foodName = document.createElement("h3");
+  foodName.textContent = object.name;
 
-  const foodPrice = document.createElement("p");
-  foodPrice.textContent = "£" + name;
+  const foodPrice = document.createElement("h3");
+  foodPrice.textContent = "£" + object.price;
 
   item.appendChild(foodName);
   item.appendChild(foodPrice);
@@ -15,8 +30,11 @@ function createMenuElement(object) {
 }
 
 //create menu
-function createMenu() {
+function createMenu(array) {
   const menu = document.createElement("div");
+  for ((item, i) => {
+    
+  })
 }
 
 //build menu
@@ -93,5 +111,20 @@ var menus = [
         items: [],
       },
     ],
+  },
+];
+
+var mains = [
+  {
+    name: "Aged beef fillet, brocolli, black garlic, Madeira and tarragon jus",
+    price: "36",
+  },
+  {
+    name: "Loin of Scottish venison, plum, parsnip, swede, venison jus",
+    price: "34",
+  },
+  {
+    name: "Packington chicken, roasted shallot, mushroom, sherry",
+    price: "29",
   },
 ];

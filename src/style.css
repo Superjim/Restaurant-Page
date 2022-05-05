@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 body {
   background-image: url("images/restaurant.jpg");
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 
 body > * {
+  font-family: "Libre Baskerville", serif;
   color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
 }
 
 /* Photo by <a href="https://unsplash.com/@kodeblacc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Favour Otunji</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
@@ -14,9 +18,29 @@ headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 2rem;
+}
+
+button {
+  background-color: Transparent;
+  color: white;
+  font-size: 2rem;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
 
 h1 {
@@ -27,5 +51,47 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+#menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#submenuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+#itemContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#addressContainer {
+  display: flex;
+  align-items: center;
+}
+
+#contactContainer {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#content {
 }

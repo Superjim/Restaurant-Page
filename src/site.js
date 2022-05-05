@@ -1,4 +1,7 @@
 import buildHomePage from "./home";
+import buildMenuPage from "./menu";
+import buildContactPage from "./contact";
+
 import Logo from "./images/logo.svg";
 
 //header, contains navbar
@@ -6,7 +9,7 @@ function buildHeader() {
   const headerContainer = document.createElement("headerContainer");
   const header = document.createElement("header");
   const name = document.createElement("h1");
-  name.textContent = "lorem ipsum restaurant";
+  name.textContent = "lorem ipsum";
 
   const logo = new Image();
   logo.src = Logo;
@@ -22,6 +25,7 @@ function buildHeader() {
 //nav bar, creates a 3 button nav bar
 function buildNavBar() {
   const navBar = document.createElement("navBar");
+  navBar.id = "navbar";
 
   const homeBtn = document.createElement("button");
   homeBtn.textContent = "Home";
@@ -32,13 +36,13 @@ function buildNavBar() {
   const menuBtn = document.createElement("button");
   menuBtn.textContent = "Menu";
   menuBtn.addEventListener("click", (e) => {
-    console.log("menu");
+    buildMenuPage();
   });
 
   const contactBtn = document.createElement("button");
   contactBtn.textContent = "Contact Us";
   contactBtn.addEventListener("click", (e) => {
-    console.log("contact");
+    buildContactPage();
   });
 
   navBar.appendChild(homeBtn);

@@ -1,5 +1,6 @@
 function initHomePage() {
   const home = document.createElement("div");
+  home.id = "home";
 
   const mainHeading = document.createElement("h1");
   const mainHeadingText = document.createTextNode(
@@ -21,7 +22,7 @@ function initHomePage() {
 
   const award = document.createElement("div");
   const awardIcon = document.createElement("i");
-  const awardText = document.createTextNode("3 Goodyear Stars");
+  const awardText = document.createTextNode(" 3 Goodyear Stars");
   awardIcon.className = "fa-solid fa-award";
 
   award.appendChild(awardIcon);

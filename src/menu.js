@@ -20,7 +20,19 @@ var menuStorage = [
         name: "Mains",
         items: [
           {
-            name: "Lunch main",
+            name: "Torched mackerel, potato salad, apple, crème fraiche",
+            price: "15",
+          },
+          {
+            name: "Chicken liver pate, cherry, tarragon, toasted brioche",
+            price: "16",
+          },
+          {
+            name: "Marinated heritage beetroot, herb ricotta, blackberry, garden cress",
+            price: "13",
+          },
+          {
+            name: "Roasted cauliflower velouté, black garlic ketchup, pickled raisin",
             price: "10",
           },
         ],
@@ -29,7 +41,15 @@ var menuStorage = [
         name: "Desserts",
         items: [
           {
-            name: "Lunch dessert",
+            name: "Lemon curd, raspberry, black pepper meringue, elderflower",
+            price: "5",
+          },
+          {
+            name: "Yoghurt & butterscotch parfait, Medjool date, caramel corn",
+            price: "5",
+          },
+          {
+            name: "Selection of three British cheeses, fruit chutney, lavosh cracker",
             price: "3",
           },
         ],
@@ -99,8 +119,16 @@ var menuStorage = [
         name: "Starters",
         items: [
           {
-            name: "Sunday roast starter",
+            name: "Salmon, pickled cucumber, dill emulsion",
+            price: "12",
+          },
+          {
+            name: "Chicken liver pate, cherry, tarragon",
             price: "8",
+          },
+          {
+            name: "Torched mackerel, potato salad, apple, crème fraiche",
+            price: "10",
           },
         ],
       },
@@ -108,16 +136,24 @@ var menuStorage = [
         name: "Mains",
         items: [
           {
-            name: "Roast beef",
-            price: "15",
+            name: "Roast beef rump cap, horseradish gel and Yorkshire pudding",
+            price: "25",
           },
           {
-            name: "Roast chicken",
-            price: "15",
+            name: "Roast pork belly, burnt apple and Yorkshire pudding",
+            price: "25",
           },
           {
-            name: "Roast veg",
-            price: "10",
+            name: "Packington chicken breast, bread sauce, truffle & tarragon and Yorkshire pudding",
+            price: "25",
+          },
+          {
+            name: "Pan-fried cod, cavolo nero, dulse butter sauce",
+            price: "25",
+          },
+          {
+            name: "Roasted celeriac risotto, toasted hazelnuts, parsley emulsion, Old Winchester",
+            price: "15",
           },
         ],
       },
@@ -125,7 +161,15 @@ var menuStorage = [
         name: "Desserts",
         items: [
           {
-            name: "Sunday cheese",
+            name: "Selection of British cheese",
+            price: "5",
+          },
+          {
+            name: "Yoghurt & butterscotch parfait, medjool date, caramel corn",
+            price: "5",
+          },
+          {
+            name: "Poached rhubarb, vanilla ice cream, black pepper meringue, rhubarb & custard granita",
             price: "5",
           },
         ],
@@ -134,10 +178,12 @@ var menuStorage = [
   },
 ];
 
-
 function buildMenu() {
   const menuContainer = document.createElement("div");
   menuContainer.id = "menuContainer";
+
+  const buttonContainer = document.createElement("div");
+  buttonContainer.id = "buttonContainer";
 
   //for each menu in menuStorage
   menuStorage.forEach((menu, i) => {
@@ -145,10 +191,11 @@ function buildMenu() {
     const menuButton = document.createElement("button");
     const name = menuStorage[i].name;
     menuButton.textContent = name;
-    menuContainer.appendChild(menuButton);
+    buttonContainer.appendChild(menuButton);
 
     //event listener for each menu button
     //will create dom object, append submenu titles to it and display items + price
+    //first check if dom object already exists, if so remove it
     menuButton.addEventListener("click", (e) => {
       if (document.contains(document.getElementById("submenuContainer"))) {
         document.getElementById("submenuContainer").remove();
@@ -185,6 +232,7 @@ function buildMenu() {
       });
       menuContainer.appendChild(submenuContainer);
     });
+    menuContainer.appendChild(buttonContainer);
   });
   return menuContainer;
 }

@@ -86,6 +86,7 @@ function buildWebsite() {
   content.appendChild(buildHeader());
   content.appendChild(buildMain());
   content.appendChild(buildFooter());
+  buildHomePage();
 }
 
 export default buildWebsite;
